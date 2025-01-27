@@ -22,14 +22,14 @@
     "dependencies": [
         {
             "name": "arduino-audio-tools",
-            "version": "*"
+            "version": "https://github.com/pschatzmann/arduino-audio-tools.git"
         },
         {
             "name": "arduino-libhelix",
-            "version": "*"
+            "version": "https://github.com/pschatzmann/arduino-libhelix"
         },
         {
-            "name": "external-repo",
+            "name": "arduino-wm8960",
             "version": "https://github.com/AlboSoc/arduino-wm8960.git"
         }
     ],
