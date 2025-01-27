@@ -15,7 +15,7 @@
         "email": "alan.boulton@gmail.com",
         "url": "https://github.com/AlboSoc",
         "maintainer": true
-      },
+      }
     ],
     "license": "MIT",
     "homepage": "https://www.helloworld.org/",
