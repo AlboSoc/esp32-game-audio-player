@@ -2,7 +2,7 @@
     "name": "esp32-game-audio-player",
     "version": "0.0.1",
     "description": "An ESP32 Arduino library for playing audio samples. Intended for use in games to trigger sound effects.",
-    "keywords": "planet, happiness, people",
+    "keywords": "game, audio, player",
     "repository":
     {
       "type": "git",
@@ -17,8 +17,8 @@
         "maintainer": true
       }
     ],
-    "license": "MIT",
-    "homepage": "https://www.helloworld.org/",
+    "license": "Apache 2.0",
+    "homepage": "https://github.com/AlboSoc/esp32-game-audio-player",
     "dependencies": [
         {
             "name": "arduino-audio-tools",
@@ -30,7 +30,7 @@
         },
         {
             "name": "external-repo",
-            "version": "https://github.com/AlboSoc/arduino-wm8960.git",
+            "version": "https://github.com/AlboSoc/arduino-wm8960.git"
         }
     ],
     "frameworks": "arduino",
