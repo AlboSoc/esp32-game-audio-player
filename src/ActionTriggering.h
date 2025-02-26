@@ -34,6 +34,8 @@ void startListeningForActionTrigger(callBackFunction* callback, uint8_t initialN
   globalCallback = callback;
   static uint8_t ucParameterToPass;
 
+  globalActionTriggeringNotification = initialNotificationValue;
+  
   // Setup new task.  Note: the main Arduino loop() is on core 1, hence why I want the new task pinned to core 0 (the last param below)
   // (see https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/01-Tasks-and-co-routines/03-Task-priorities)
   // Note that configMAX_PRIORITIES is 25
@@ -44,11 +46,14 @@ void startListeningForActionTrigger(callBackFunction* callback, uint8_t initialN
 void stopListeningForActionTrigger(void) {
   if( xHandle != NULL ){
       vTaskDelete( xHandle );
+      globalActionTriggeringNotification = action;
   }
 }
 
 void triggerAction(int action) {
-  globalActionTriggeringNotification = action;
+  if( xHandle != NULL ){
+    globalActionTriggeringNotification = action;
+  }
 }
 
 #endif
